@@ -11,14 +11,24 @@ double[][] b = new double[2][1];
       public  void ma()
     {
         
-        int i,j,k;
+        int i,j,k,;
+          double c=0.0;
         for ( i = 0; i < 4; i++)
         {
             for ( j = 0; j < 1; j++)
             {
                 for ( k = 0; k < 2; k++)
-                {
-                    d[i][j] = d[i][j] + a[i][k] * b[k][j];
+                {   c=d[i][j];
+                    c = c + (a[i][k] * b[k][j]);
+                    if(c>0.5)
+                    {
+                        d[i][j]=1.0;
+                    }
+                 else
+                 {
+                     d[i][j]=0.0;
+                 }
+                        
                 }
             }
         }
